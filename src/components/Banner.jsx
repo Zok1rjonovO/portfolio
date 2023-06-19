@@ -5,7 +5,7 @@ import avatar from "../assets/avatar.svg";
 import { FaGithub, FaYoutube, FaInstagram } from "react-icons/fa";
 //type animation
 import { TypeAnimation } from "react-type-animation";
-//motton
+//motion
 import { motion } from "framer-motion";
 //variants
 import { fadeIn } from "../variants";
