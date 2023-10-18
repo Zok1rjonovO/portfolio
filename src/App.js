@@ -7,6 +7,9 @@ import About from "./components/About";
 import Services from "./components/Services";
 import Work from "./components/Work";
 import Contact from "./components/Contact";
+import { Route, Routes } from "react-router-dom";
+import HiraganaRandomizer from "./components/HiraganaRandomizer";
+import { NotFound } from "./components/NotFound";
 
 const App = () => {
   return (

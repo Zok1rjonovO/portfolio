@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hiragana Randomizer</title>
+<style>
+     p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 48px;
+    }
+
+</style>
+</head>
+<body>
+  <h1>Hiragana Randomizer</h1>
+  <button onclick="randomize()">Randomize</button>
+  <button onclick="speak()">Speak</button>
+  <p id="randomHiragana"></p>
+
+  <script>
+    const hiragana = [
+      'あ', 'い', 'う', 'え', 'お',
+      'か', 'き', 'く', 'け', 'こ',
+      'さ', 'し', 'す', 'せ', 'そ',
+      'た', 'ち', 'つ', 'て', 'と',
+      'な', 'に', 'ぬ', 'ね', 'の',
+      'は', 'ひ', 'ふ', 'へ', 'ほ',
+      'ま', 'み', 'む', 'め', 'も',
+      'や', 'ゆ', 'よ',
+      'ら', 'り', 'る', 'れ', 'ろ',
+      'わ', 'を', 'ん'
+    ];
+
+    function randomize() {
+      const randomIndex = Math.floor(Math.random() * hiragana.length);
+      const randomCharacter = hiragana[randomIndex];
+      document.getElementById('randomHiragana').textContent = randomCharacter;
+    }
+
+    function speak() {
+      const randomCharacter = document.getElementById('randomHiragana').textContent;
+      const speech = new SpeechSynthesisUtterance(randomCharacter);
+      speech.lang = 'ja-JP';
+      speech.volume = 1;
+      speech.rate = 1;
+      speech.pitch = 1;
+      window.speechSynthesis.speak(speech);
+    }
+  </script>
+</body>
+</html>

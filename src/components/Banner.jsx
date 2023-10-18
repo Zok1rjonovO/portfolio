@@ -58,7 +58,9 @@ const Banner = () => {
               variants={fadeIn("up", 0.6)}
               initial="hidden"
               whileInView={"show"}
-              viewport={{ once: false, amount: 0.7 }} className="mb-8 max-auto lg:mx-0 lg:px-[30px 110px]">
+              viewport={{ once: false, amount: 0.7 }}
+              className="mb-8 max-auto lg:mx-0 lg:px-[30px 110px]"
+            >
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde,
               numquam. Harum deleniti id sapiente.
             </motion.p>
@@ -69,7 +71,9 @@ const Banner = () => {
               viewport={{ once: false, amount: 0.7 }}
               className="flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0"
             >
-              <button className="btn btn-lg">Contact me</button>
+              <a href="https://jovial-vacherin-a97427.netlify.app">
+                <button className="btn btn-lg">Contact me</button>
+              </a>
               <a href="#" className="text-gradient btn-link">
                 My portfolio
               </a>

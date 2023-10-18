@@ -7,7 +7,7 @@ const Header = () => {
       <div className="container mx-auto">
         <div className="flex flex-row justify-between items-center mt-8 text-[24px] lg:text-[32px] font-secondary font-semibold uppercase leading-[1] ">
           <a href="#" className="flex flex-col gap-3 text-white mr-4">
-          <motion.h1
+            <motion.h1
               variants={fadeIn("up", 0.3)}
               initial="hidden"
               whileInView={"show"}
@@ -18,11 +18,14 @@ const Header = () => {
             </motion.h1>
           </a>
           <motion.button
-          variants={fadeIn("up", 0.3)}
-          initial="hidden"
-          whileInView={"show"}
-          viewport={{ once: false, amount: 0.7 }}>
-          <button className="btn btn-sm">work with me</button>
+            variants={fadeIn("up", 0.3)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.7 }}
+          >
+            <a href="https://jovial-vacherin-a97427.netlify.app">
+              <button className="btn btn-sm">work with me</button>
+            </a>
           </motion.button>
         </div>
       </div>
